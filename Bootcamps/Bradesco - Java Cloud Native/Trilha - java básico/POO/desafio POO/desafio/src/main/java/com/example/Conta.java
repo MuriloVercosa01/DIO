@@ -12,7 +12,7 @@ public abstract class Conta implements Iconta {
 
     public Conta(Cliente cliente){
         this.agencia = Conta.AGENCIA_PADRAO;
-        this.numero = Conta.SEQUENCIAL;
+        this.numero = Conta.SEQUENCIAL++;
         this.cliente = cliente;
     }
 
@@ -36,13 +36,13 @@ public abstract class Conta implements Iconta {
 
     }
 
-    @Override
-    public void infoComum() {
+    protected void infoComum() {
         System.out.println("titular da conta: "+ this.cliente.getNome());
         System.out.println("cpf do titular: "+ this.cliente.getCpf());
         System.out.println("numero agência: "+ this.agencia);
         System.out.println("numero de conta: "+this.numero);
         System.out.println("saldo: "+ saldo);
+        System.out.println("================================");
     }
 
 }
