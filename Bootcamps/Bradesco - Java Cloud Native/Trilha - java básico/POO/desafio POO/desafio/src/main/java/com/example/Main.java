@@ -8,12 +8,12 @@ public class Main {
         Cliente cleiton = new Cliente();
         cleiton.setNome("cleiton");
         cleiton.setCpf("123.321.789-1");
-        ContaCorrente cc = new ContaCorrente(cleiton);
+        ContaCorrente cc = new ContaCorrente(cleiton , Banco.BRADESCO );
 
         cc.deposito(100);
         cc.imprimirRelatorio();
 
-        ContaPoupanca cp = new ContaPoupanca(cleiton);
+        ContaPoupanca cp = new ContaPoupanca(cleiton , Banco.BRADESCO );
 
         cp.imprimirRelatorio();
         
