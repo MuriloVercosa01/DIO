@@ -8,7 +8,5 @@ public interface Iconta {
 
     boolean tranferencia(double valor , Conta contadestino);
 
-    void infoComum();
-
     void imprimirRelatorio();
 }
